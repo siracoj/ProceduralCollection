@@ -1,0 +1,17 @@
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/jsiraco/Procedural Landmass/obj/Debug/Assembly-CSharp.dll
+/Users/jsiraco/Procedural Landmass/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/UnityEngine.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/UnityEditor.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Mono.Cecil.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Unity.DataContract.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/jsiraco/Procedural Landmass/Temp/bin/Debug/Mono.Cecil.Mdb.dll
