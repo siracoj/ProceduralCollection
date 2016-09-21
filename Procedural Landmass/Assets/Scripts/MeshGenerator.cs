@@ -3,20 +3,30 @@ using System.Collections;
 
 public static class MeshGenerator {
 
-	// modifying our plane to have physical height values
-	public static MeshData GenerateTerrainMesh(float[,] heightMap, float heightMulitplier, AnimationCurve heightCurve){
+	// Creating a 3D mesh from our height map
+	public static MeshData GenerateTerrainMesh(float[,] heightMap, float heightMulitplier, AnimationCurve heightCurve, int levelOfDetail){
 		int width = heightMap.GetLength (0);
 		int height = heightMap.GetLength (1);
+
+		// Multipling by 2 to make it a factor of 240
+		int meshSimplificationIncrement = levelOfDetail * 2;
+
+		// Has to at least = 1 to work
+		if (meshSimplificationIncrement == 0)
+			meshSimplificationIncrement = 1;
+
+		// Determining "Vertex width"
+		int verticiesPerLine = (width - 1) / meshSimplificationIncrement + 1;
 
 		// making sure that the mesh is centered
 		float topLeftX = (width - 1) / -2f; 
 		float topLeftZ = (height - 1) / 2f;
 
-		MeshData meshData = new MeshData (width, height);
+		MeshData meshData = new MeshData (verticiesPerLine, verticiesPerLine);
 		int vertexIndex = 0;
 
-		for (int y = 0; y < height; y++) {
-			for (int x = 0; x < width; x++) {
+		for (int y = 0; y < height; y+=meshSimplificationIncrement) {
+			for (int x = 0; x < width; x+=meshSimplificationIncrement) {
 
 				meshData.vertices [vertexIndex] = new Vector3 (
 					topLeftX + x, 
@@ -38,8 +48,8 @@ public static class MeshGenerator {
 
 					int trianglePointA = vertexIndex; // Current point
 					int trianglePointB = trianglePointA + 1; // Point 1 to the right
-					int trianglePointC = trianglePointA + width; // Point 1 down
-					int trianglePointD = trianglePointB + width; // Point 1 to the right and 1 down
+					int trianglePointC = trianglePointA + verticiesPerLine; // Point 1 down
+					int trianglePointD = trianglePointB + verticiesPerLine; // Point 1 to the right and 1 down
 
 					// Adding the two triangles related to the current vertex
 					meshData.AddTriangle (trianglePointA, trianglePointD, trianglePointC);
