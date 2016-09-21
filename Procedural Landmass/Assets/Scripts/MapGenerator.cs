@@ -13,7 +13,7 @@ public class MapGenerator : MonoBehaviour {
 	 * Using 241 as the width because the level of detail(LOD) must be determined by a factor of width - 1
 	 * Useful Factors of 240: 1, 2, 4, 6, 8, 10, 12 (240 gives us lots of options for LOD)
 	 */ 
-	const int mapChunkSize = 241; // Fixed Square size for our mesh chunks
+	public const int mapChunkSize = 241; // Fixed Square size for our mesh chunks
 	[Range(0,6)]
 	public int levelOfDetail; // # of vertecies to skip over rendering, reducing detail
 	public float scale; // Scale of the map
